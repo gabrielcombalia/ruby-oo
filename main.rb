@@ -28,3 +28,17 @@ puts novaContaAnaClaudia.titular.sobrenome
 novaContaAnaClaudia.titular.sobrenome = novaContaAnaClaudia.titular.sobrenome + " Combalia"
 
 puts novaContaAnaClaudia.titular.sobrenome
+
+require_relative 'conta_corrente'
+
+cliente = Cliente.new('Joao','Pedro')
+corrente = ContaCorrente.new(1,cliente, 300, 500)
+
+puts corrente.limite
+
+corrente.sacar(801)
+
+corrente.sacar(799)
+
+puts corrente.saldo
+
