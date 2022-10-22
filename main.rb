@@ -17,3 +17,14 @@ contaGabriel.transferir(contaIvor, 1)
 
 puts contaGabriel.saldo
 puts contaIvor.saldo
+
+clienteAnaClaudia = Cliente.new('Ana Claudia', 'Caciquinho')
+novaContaAnaClaudia = Conta.new(3, clienteAnaClaudia, 10)
+
+puts novaContaAnaClaudia.titular
+
+puts novaContaAnaClaudia.titular.sobrenome
+
+novaContaAnaClaudia.titular.sobrenome = novaContaAnaClaudia.titular.sobrenome + " Combalia"
+
+puts novaContaAnaClaudia.titular.sobrenome
