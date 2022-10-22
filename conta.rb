@@ -8,5 +8,22 @@ class Conta
     @titular = titular
     @saldo = saldo
   end
+
+  def sacar(valor)
+    if self.saldo >= valor
+      self.saldo = self.saldo - valor
+    else
+      puts "Não foi possível sacar o valor"
+    end
+  end
+
+  def depositar(valor)
+    self.saldo = self.saldo + valor
+  end
+
+  def transferir(conta_destino, valor)
+    sacar(valor)
+    conta_destino.depositar(valor)
+  end
   
 end
